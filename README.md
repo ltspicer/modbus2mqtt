@@ -80,7 +80,7 @@ The **config.yaml** file stored here:
 
 **/opt/modbus-mqtt/config.yaml**
 
-In **/etc/systemd/system/modbus-mqtt.service** (modbus-mqtt.service muss neu erstellt werden)
+In **/etc/systemd/system/modbus-mqtt.service**  (modbus-mqtt.service muss neu erstellt werden)
 
 ```
 [Unit]
