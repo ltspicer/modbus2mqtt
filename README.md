@@ -46,4 +46,4 @@ Der Datenpunkt sieht dann etwa so aus:
 
 **mqtt.0.modbus.inverter.register.{Registeradresse_name_description}**
 
-![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik.png)
+![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik1.png)
