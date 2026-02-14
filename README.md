@@ -14,7 +14,7 @@ Die **config.yaml** Datei hier speichern:
 
 **/opt/modbus-mqtt/config.yaml**
 
-In der **/etc/systemd/system/modbus-mqtt.service**
+In der **/etc/systemd/system/modbus-mqtt.service** (modbus-mqtt.service muss neu erstellt werden)
 
 ```
 [Unit]
