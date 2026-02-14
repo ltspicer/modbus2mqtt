@@ -8,11 +8,11 @@ Die gewünschten Datenpunkte und Einstellungen werden in der **config.yaml** ein
 
 Script hier gespeichert (in einem eigenen LXC):
 
-/opt/modbus-mqtt/modbus_tcp_rtu.py
+**/opt/modbus-mqtt/modbus_tcp_rtu.py**
 
-Die config.yaml Datei hier gespeichert:
+Die **config.yaml** Datei hier gespeichert:
 
-/opt/modbus-mqtt/config.yaml
+**/opt/modbus-mqtt/config.yaml**
 
 In der **/etc/systemd/system/modbus-mqtt.service**
 
@@ -52,11 +52,11 @@ Der Datenpunkt sieht dann etwa so aus:
 ![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik1.png)
 
 
-Das Script sollte automatisch neu starten nach Änderung der config.yaml
+Das Script sollte nach Änderung der config.yaml automatisch neu starten 
 
 Von Hand kann es so neu gestartet werden:
 
-systemctl restart modbus-mqtt.service
+**systemctl restart modbus-mqtt.service**
 
 Mein Waveshare:
 
@@ -74,11 +74,11 @@ The desired data points and settings are entered in **config.yaml**.
 
 Script stored here (in a separate LXC):
 
-/opt/modbus-mqtt/modbus_tcp_rtu.py
+**/opt/modbus-mqtt/modbus_tcp_rtu.py**
 
-The config.yaml file stored here:
+The **config.yaml** file stored here:
 
-/opt/modbus-mqtt/config.yaml
+**/opt/modbus-mqtt/config.yaml**
 
 In **/etc/systemd/system/modbus-mqtt.service**
 
@@ -122,7 +122,7 @@ The script should restart automatically after changing config.yaml.
 
 It can be restarted manually as follows:
 
-systemctl restart modbus-mqtt.service
+**systemctl restart modbus-mqtt.service**
 
 My Waveshare:
 
