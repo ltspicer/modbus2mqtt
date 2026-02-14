@@ -80,7 +80,7 @@ The **config.yaml** file stored here:
 
 **/opt/modbus-mqtt/config.yaml**
 
-In **/etc/systemd/system/modbus-mqtt.service**
+In **/etc/systemd/system/modbus-mqtt.service** (modbus-mqtt.service muss neu erstellt werden)
 
 ```
 [Unit]
@@ -122,7 +122,7 @@ The script should restart automatically after changing config.yaml.
 
 It can be restarted manually as follows:
 
-**systemctl restart modbus-mqtt.service**
+**systemctl restart modbus-mqtt.service** (modbus-mqtt.service must be builded)
 
 My Waveshare:
 
