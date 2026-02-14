@@ -10,7 +10,7 @@ mqtt:
   username: "mqtt-user"             # MQTT user (leave blank if no auth)
   password: "mqtt-password"         # MQTT password (leave blank if no auth)
 
-poll_interval: 13
+poll_interval: 13                   # Poll intervall in Seconds
 
 registers:
   - addr: 1199                      # Total Verbrauch in kW
