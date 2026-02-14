@@ -54,6 +54,10 @@ Das Script sollte automatisch neu starten nach Änderung der config.yaml
 Von Hand kann es so neu gestartet werden:
 systemctl restart modbus-mqtt.service
 
+Mein Waveshare:
+
+![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
+
 ---------------------------------------
 
 My configuration (Example):
@@ -111,4 +115,8 @@ The script should restart automatically after changing config.yaml.
 
 It can be restarted manually as follows:
 systemctl restart modbus-mqtt.service
+
+My Waveshare:
+
+![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
 
