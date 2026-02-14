@@ -1,6 +1,6 @@
-### This script receives data from an RS485 to LAN/WIFI converter and forwards it to another device via MQTT.
+### This script receives data from an "RS485 to LAN/WIFI" converter and forwards it to another device via MQTT.
 
-### Dieses Script empfängt Daten von einem RS485 zu LAN/WIFI Converter und sendet diese per MQTT an ein anderes Gerät weiter.
+### Dieses Script empfängt Daten von einem "RS485 zu LAN/WIFI" Converter und sendet diese per MQTT an ein anderes Gerät weiter.
 
 ---------------------------------------
 
