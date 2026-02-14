@@ -7,7 +7,7 @@
 My configuration (Example):
 
 - ioBroker (with MQTT adapter) in a Proxmox LXC
-- Waveshare RS485 TO Wifi/ETH Converter (setting: “Transparent.” NOT: “modbus TCP <=> modbus RTU”)
+- Waveshare RS485 TO Wifi/ETH Converter (setting must be “**Transparent**” and **not** “modbus TCP <=> modbus RTU”)
 - SOFAR HYD20KTL-3PH inverter
 
 The desired data points and settings are entered in **config.yaml**.
@@ -72,7 +72,7 @@ My Waveshare:
 Meine Konfiguration (Beispiel):
 
 - ioBroker (mit MQTT Adapter) in einem Proxmox LXC
-- Waveshare RS485 TO Wifi/ETH Converter (Einstellung: "Transparent". NICHT: "modbus TCP <=> modbus RTU")
+- Waveshare RS485 TO Wifi/ETH Converter (Einstellung muss "**Transparent**" sein und **nicht** "modbus TCP <=> modbus RTU")
 - SOFAR HYD20KTL-3PH Wechselrichter
 
 Die gewünschten Datenpunkte und Einstellungen werden in der **config.yaml** eingegeben.
