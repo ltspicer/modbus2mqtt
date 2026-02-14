@@ -2,6 +2,10 @@
 
 ### Dieses Script empfängt Daten von einem "RS485 zu LAN/WIFI" Converter und sendet diese per MQTT an ein anderes Gerät weiter.
 
+My/Mein Waveshare:
+
+![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
+
 ---------------------------------------
 
 My configuration (Example):
@@ -63,10 +67,6 @@ It can be restarted manually as follows:
 
 **systemctl restart modbus-mqtt.service**
 
-My Waveshare:
-
-![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
-
 ---------------------------------------
 
 Meine Konfiguration (Beispiel):
@@ -127,8 +127,3 @@ Das Script startet nach einer Änderung der config.yaml automatisch neu.
 Von Hand kann es so neu gestartet werden:
 
 **systemctl restart modbus-mqtt.service**
-
-Mein Waveshare:
-
-![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
-
