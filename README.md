@@ -12,7 +12,7 @@ My configuration (Example):
 
 The desired data points and settings are entered in **config.yaml**.
 
-Script must be stored in a separate LXC:
+Script can be stored in its own LXC:
 
 **/opt/modbus-mqtt/modbus_tcp_rtu.py**
 
@@ -77,7 +77,7 @@ Meine Konfiguration (Beispiel):
 
 Die gewünschten Datenpunkte und Einstellungen werden in der **config.yaml** eingegeben.
 
-Script muss in einem eigenen LXC gespeichert werden:
+Script kann in einem eigenen LXC gespeichert werden:
 
 **/opt/modbus-mqtt/modbus_tcp_rtu.py**
 
