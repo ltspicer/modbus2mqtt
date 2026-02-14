@@ -2,70 +2,6 @@
 
 ### This script receives data from an RS485 to LAN/WIFI converter and forwards it to another device via MQTT.
 
-Meine Konfiguration (Beispiel):
-
-- ioBroker (mit MQTT Adapter) in einem Proxmox LXC
-- Waveshare RS485 TO Wifi/ETH Converter (Einstellung: "Transparent". NICHT: "modbus TCP <=> modbus RTU")
-- SOFAR HYD20KTL-3PH Wechselrichter
-
-Die gewünschten Datenpunkte und Einstellungen werden in der **config.yaml** eingegeben.
-
-Script muss in einem eigenen LXC gespeichert werden:
-
-**/opt/modbus-mqtt/modbus_tcp_rtu.py**
-
-Die **config.yaml** Datei hier speichern:
-
-**/opt/modbus-mqtt/config.yaml**
-
-In der **/etc/systemd/system/modbus-mqtt.service** (modbus-mqtt.service muss neu erstellt werden)
-
-```
-[Unit]
-Description=Modbus RTU over TCP to MQTT Gateway
-After=network-online.target
-Wants=network-online.target
-
-[Service]
-Type=simple
-User=root
-WorkingDirectory=/opt/modbus-mqtt
-ExecStart=/usr/bin/env python3 /opt/modbus-mqtt/modbus_tcp_rtu.py
-Restart=always
-RestartSec=5
-Environment=PYTHONUNBUFFERED=1
-
-[Install]
-WantedBy=multi-user.target
-```
-
-Wenn alles fertig ist, eingeben:
-
-```
-sudo systemctl daemon-reload
-sudo systemctl enable modbus-mqtt.service
-sudo systemctl start modbus-mqtt.service
-```
-
-Die Daten werden nun per MQTT an den ioBroker gesendet.
-
-Der Datenpunkt sieht dann etwa so aus:
-
-**mqtt.0.modbus.inverter.register.{Registeradresse_name_description}**
-
-![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik1.png)
-
-
-Das Script sollte nach Änderung der config.yaml automatisch neu starten 
-
-Von Hand kann es so neu gestartet werden:
-
-**systemctl restart modbus-mqtt.service**
-
-Mein Waveshare:
-
-![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
-
 ---------------------------------------
 
 My configuration (Example):
@@ -129,6 +65,72 @@ It can be restarted manually as follows:
 **systemctl restart modbus-mqtt.service**
 
 My Waveshare:
+
+![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
+
+---------------------------------------
+
+Meine Konfiguration (Beispiel):
+
+- ioBroker (mit MQTT Adapter) in einem Proxmox LXC
+- Waveshare RS485 TO Wifi/ETH Converter (Einstellung: "Transparent". NICHT: "modbus TCP <=> modbus RTU")
+- SOFAR HYD20KTL-3PH Wechselrichter
+
+Die gewünschten Datenpunkte und Einstellungen werden in der **config.yaml** eingegeben.
+
+Script muss in einem eigenen LXC gespeichert werden:
+
+**/opt/modbus-mqtt/modbus_tcp_rtu.py**
+
+Die **config.yaml** Datei hier speichern:
+
+**/opt/modbus-mqtt/config.yaml**
+
+In der **/etc/systemd/system/modbus-mqtt.service** (modbus-mqtt.service muss neu erstellt werden)
+
+```
+[Unit]
+Description=Modbus RTU over TCP to MQTT Gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/modbus-mqtt
+ExecStart=/usr/bin/env python3 /opt/modbus-mqtt/modbus_tcp_rtu.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Wenn alles fertig ist, eingeben:
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable modbus-mqtt.service
+sudo systemctl start modbus-mqtt.service
+```
+
+Die Daten werden nun per MQTT an den ioBroker gesendet.
+
+Der Datenpunkt sieht dann etwa so aus:
+
+**mqtt.0.modbus.inverter.register.{Registeradresse_name_description}**
+
+![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik1.png)
+
+
+Das Script sollte nach Änderung der config.yaml automatisch neu starten 
+
+Von Hand kann es so neu gestartet werden:
+
+**systemctl restart modbus-mqtt.service**
+
+Mein Waveshare:
 
 ![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/rs485toLAN_WIFI.png)
 
