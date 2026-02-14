@@ -16,7 +16,7 @@ Script must be stored in a separate LXC:
 
 **/opt/modbus-mqtt/modbus_tcp_rtu.py**
 
-The **config.yaml** file stored here:
+The **config.yaml** file is stored here:
 
 **/opt/modbus-mqtt/config.yaml**
 
@@ -57,8 +57,7 @@ The data point then looks something like this:
 
 ![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik1.png)
 
-
-The script should restart automatically after changing config.yaml.
+The script restarts automatically after a change to config.yaml.
 
 It can be restarted manually as follows:
 
@@ -123,8 +122,7 @@ Der Datenpunkt sieht dann etwa so aus:
 
 ![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik1.png)
 
-
-Das Script sollte nach Änderung der config.yaml automatisch neu starten 
+Das Script startet nach einer Änderung der config.yaml automatisch neu.
 
 Von Hand kann es so neu gestartet werden:
 
