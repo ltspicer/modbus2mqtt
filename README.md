@@ -1,3 +1,7 @@
+### Dieses Script empfängt Daten von einem RS485 zu LAN/WIFI Converter und sendet diese per MQTT an ein anderes Gerät weiter.
+
+### This script receives data from an RS485 to LAN/WIFI converter and forwards it to another device via MQTT.
+
 Meine Konfiguration (Beispiel):
 
 - ioBroker (mit MQTT Adapter) in einem Proxmox LXC
@@ -80,7 +84,7 @@ The **config.yaml** file stored here:
 
 **/opt/modbus-mqtt/config.yaml**
 
-In **/etc/systemd/system/modbus-mqtt.service**  (modbus-mqtt.service muss neu erstellt werden)
+In **/etc/systemd/system/modbus-mqtt.service** (modbus-mqtt.service must be recreated)
 
 ```
 [Unit]
@@ -122,7 +126,7 @@ The script should restart automatically after changing config.yaml.
 
 It can be restarted manually as follows:
 
-**systemctl restart modbus-mqtt.service** (modbus-mqtt.service must be builded)
+**systemctl restart modbus-mqtt.service**
 
 My Waveshare:
 
