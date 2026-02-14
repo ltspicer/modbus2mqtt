@@ -1,0 +1,57 @@
+modbus:
+  host: "192.168.88.101"            # IP address from modbus device
+  port: 8899
+  unit_id: 1
+
+mqtt:
+  host: "192.168.1.251"             # MQTT broker address
+  port: 1883
+  base_topic: "modbus/inverter"
+  username: "mqtt-user"             # MQTT user (leave blank if no auth)
+  password: "mqtt-password"         # MQTT password (leave blank if no auth)
+
+poll_interval: 13
+
+registers:
+  - addr: 1199                      # Total Verbrauch in kW
+    name: "ActivePower_Load_Sys"
+    type: "uint16"
+    factor: 0.01
+    decimals: 2
+    description: "Total Verbrauch"
+
+  - addr: 1160                      # BKW Netz in kW
+    name: "ActivePower_PCC_Total"
+    type: "int16"
+    factor: 0.01
+    decimals: 2
+    description: "BKW Netz"
+
+  - addr: 1476                      # PV Produktion in kW
+    name: "Power_PV_Total"
+    type: "uint16"
+    factor: 0.1
+    decimals: 2
+    description: "PV Produktion"
+
+  - addr: 1542                      # Akku Leistung in kW
+    name: "Power_Bat1"
+    type: "int16"
+    factor: 0.01
+    decimals: 2
+    description: "Akku Leistung"
+
+  - addr: 1544                      # Akku Ladung in %
+    name: "SOC_Bat1"
+    type: "uint16"
+    factor: 1
+    decimals: 0
+    description: "Akku Ladung"
+
+  - addr: 1668                      # PV Produktion heute in kWh
+    name: "PV_Generation_Today"
+    type: "uint32"
+    factor: 0.01
+    decimals: 2
+    description: "PV Produktion heute"
+
