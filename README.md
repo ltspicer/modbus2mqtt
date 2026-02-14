@@ -4,15 +4,17 @@ Meine Konfiguration (Beispiel):
 - Waveshare RS485 TO Wifi/ETH Converter (Einstellung: "Transparent". NICHT: "modbus TCP <=> modbus RTU")
 - SOFAR HYD20KTL-3PH Wechselrichter
 
-Die gewünschten Datenpunkte und Einstellungen werden in der config.yaml eingegeben.
+Die gewünschten Datenpunkte und Einstellungen werden in der **config.yaml** eingegeben.
 
 Script hier gespeichert (in einem eigenen LXC):
+
 /opt/modbus-mqtt/modbus_tcp_rtu.py
 
 Die config.yaml Datei hier gespeichert:
+
 /opt/modbus-mqtt/config.yaml
 
-In der /etc/systemd/system/modbus-mqtt.service
+In der **/etc/systemd/system/modbus-mqtt.service**
 
 ```
 [Unit]
@@ -42,6 +44,7 @@ sudo systemctl start modbus-mqtt.service
 ```
 
 Die Daten werden nun per MQTT an den ioBroker gesendet.
+
 Der Datenpunkt sieht dann etwa so aus:
 
 **mqtt.0.modbus.inverter.register.{Registeradresse_name_description}**
@@ -52,6 +55,7 @@ Der Datenpunkt sieht dann etwa so aus:
 Das Script sollte automatisch neu starten nach Änderung der config.yaml
 
 Von Hand kann es so neu gestartet werden:
+
 systemctl restart modbus-mqtt.service
 
 Mein Waveshare:
@@ -66,15 +70,17 @@ My configuration (Example):
 - Waveshare RS485 TO Wifi/ETH Converter (setting: “Transparent.” NOT: “modbus TCP <=> modbus RTU”)
 - SOFAR HYD20KTL-3PH inverter
 
-The desired data points and settings are entered in config.yaml.
+The desired data points and settings are entered in **config.yaml**.
 
 Script stored here (in a separate LXC):
+
 /opt/modbus-mqtt/modbus_tcp_rtu.py
 
 The config.yaml file stored here:
+
 /opt/modbus-mqtt/config.yaml
 
-In /etc/systemd/system/modbus-mqtt.service
+In **/etc/systemd/system/modbus-mqtt.service**
 
 ```
 [Unit]
@@ -104,6 +110,7 @@ sudo systemctl start modbus-mqtt.service
 ```
 
 The data is now sent to ioBroker via MQTT.
+
 The data point then looks something like this:
 
 **mqtt.0.modbus.inverter.register.{register_address_name_description}**
@@ -114,6 +121,7 @@ The data point then looks something like this:
 The script should restart automatically after changing config.yaml.
 
 It can be restarted manually as follows:
+
 systemctl restart modbus-mqtt.service
 
 My Waveshare:
