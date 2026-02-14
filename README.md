@@ -113,7 +113,7 @@ The data is now sent to ioBroker via MQTT.
 
 The data point then looks something like this:
 
-**mqtt.0.modbus.inverter.register.{register_address_name_description}**
+**mqtt.0.modbus.inverter.register.{register-address_name_description}**
 
 ![Screenshot](https://github.com/ltspicer/modbus2mqtt/blob/main/grafik1.png)
 
