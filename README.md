@@ -16,6 +16,8 @@ My configuration (Example):
 
 The desired data points and settings are entered in **config.yaml**.
 
+If the two networks are different, routing to the other network in the corresponding router is of course necessary.
+
 Script can be stored in its own LXC:
 
 **/opt/modbus-mqtt/modbus_tcp_rtu.py**
@@ -76,6 +78,8 @@ Meine Konfiguration (Beispiel):
 - SOFAR HYD20KTL-3PH Wechselrichter
 
 Die gewünschten Datenpunkte und Einstellungen werden in der **config.yaml** eingegeben.
+
+Falls die beiden Netzwerke unterschiedlich sind, ist natürlich ein Routing zum anderen Netzwerk im entsprechenden Router notwendig.
 
 Script kann in einem eigenen LXC gespeichert werden:
 
